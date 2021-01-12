@@ -61,6 +61,16 @@ def main():
         background_color_entry = createBackgroundColorEntry(root_input)
         background_color_entry.pack()
 
+        text_entry = createBlankEntry(root_input)
+        text_entry.pack()
+
+        button = createCommandButton(
+            root_input,
+            'Click here to submit',
+            text_entry
+        )
+        button.pack()
+
         root_input.mainloop()
 
 
