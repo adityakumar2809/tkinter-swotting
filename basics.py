@@ -16,8 +16,9 @@ def createLabel(root):
 
 def main():
     root = tkinterSetup()
-
     text_label = createLabel(root)
+    text_label.pack()
+    root.mainloop()
 
 
 if __name__ == "__main__":
