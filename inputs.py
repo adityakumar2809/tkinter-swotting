@@ -6,6 +6,11 @@ def tkinterSetup():
     return root
 
 
+def createBlankEntry(root):
+    entry = tkinter.Entry(root)
+    return entry
+
+
 def main():
 
     running_status = {
@@ -15,6 +20,8 @@ def main():
     # INPUT
     if running_status['input']:
         root_input = tkinterSetup()
+        blank_entry = createBlankEntry(root_input)
+        blank_entry.pack()
 
         root_input.mainloop()
 
