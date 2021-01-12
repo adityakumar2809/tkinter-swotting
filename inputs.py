@@ -16,6 +16,11 @@ def createWideEntry(root):
     return entry
 
 
+def createFontColorEntry(root):
+    entry = tkinter.Entry(root, fg='green')
+    return entry
+
+
 def main():
 
     running_status = {
@@ -30,6 +35,9 @@ def main():
 
         wide_entry = createWideEntry(root_input)
         wide_entry.pack()
+
+        font_color_entry = createFontColorEntry(root_input)
+        font_color_entry.pack()
 
         root_input.mainloop()
 
