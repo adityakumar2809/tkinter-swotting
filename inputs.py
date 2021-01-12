@@ -11,8 +11,8 @@ def createBlankEntry(root):
     return entry
 
 
-def createWideEntry(root):
-    entry = tkinter.Entry(root, width=60)
+def createWideEntry(root, width=60):
+    entry = tkinter.Entry(root, width=width)
     return entry
 
 
