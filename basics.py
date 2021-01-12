@@ -6,19 +6,24 @@ def tkinterSetup():
     return root
 
 
-def createLabel(root):
+def createLabel(root, text):
     my_label = tkinter.Label(
         master=root,
-        text='Hello World!'
+        text=text
     )
     return my_label
 
 
 def main():
     root_basic = tkinterSetup()
-    text_label = createLabel(root_basic)
+    text_label = createLabel(root_basic, 'Hello World!')
     text_label.pack()
     root_basic.mainloop()
+
+    root_grid = tkinterSetup()
+    text_label_1 = createLabel(root_grid, 'Hello World!')
+    text_label_2 = createLabel(root_grid, 'I am Aditya')
+    root_grid.mainloop()
 
 
 if __name__ == "__main__":
