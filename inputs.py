@@ -40,9 +40,9 @@ def showLabelOnClick(root, entry):
     text_label.pack()
 
 
-def createPreFilledEntry(root):
+def createPreFilledEntry(root, text='I am pre-filled'):
     entry = tkinter.Entry(root)
-    entry.insert(index=0, string='I am pre-filled')
+    entry.insert(index=0, string=text)
     return entry
 
 
