@@ -26,12 +26,18 @@ def createBackgroundColorEntry(root):
     return entry
 
 
-def createButton(root, text):
+def createCommandButton(root, text, entry):
     my_button = tkinter.Button(
         master=root,
-        text=text
+        text=text,
+        command=lambda: showLabelOnClick(root, entry)
     )
     return my_button
+
+
+def showLabelOnClick(root, entry):
+    text_label = tkinter.Label(root, text=entry.get())
+    text_label.pack()
 
 
 def main():
