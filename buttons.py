@@ -47,6 +47,15 @@ def showLabelOnClick(root):
     text_label.pack()
 
 
+def createFontColorButton(root, text):
+    my_button = tkinter.Button(
+        master=root,
+        text=text,
+        fg='red'
+    )
+    return my_button
+
+
 def main():
 
     running_status = {
@@ -76,6 +85,12 @@ def main():
             'I execute a command'
         )
         command_button.pack()
+
+        font_color_button = createFontColorButton(
+            root_button,
+            'I should have red text'
+        )
+        font_color_button.pack()
 
         root_button.mainloop()
 
