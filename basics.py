@@ -15,10 +15,10 @@ def createLabel(root):
 
 
 def main():
-    root = tkinterSetup()
-    text_label = createLabel(root)
+    root_basic = tkinterSetup()
+    text_label = createLabel(root_basic)
     text_label.pack()
-    root.mainloop()
+    root_basic.mainloop()
 
 
 if __name__ == "__main__":
