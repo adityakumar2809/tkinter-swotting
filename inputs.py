@@ -40,6 +40,12 @@ def showLabelOnClick(root, entry):
     text_label.pack()
 
 
+def createPreFilledEntry(root):
+    entry = tkinter.Entry(root)
+    entry.insert(index=0, string='I am pre-filled')
+    return entry
+
+
 def main():
 
     running_status = {
@@ -70,6 +76,9 @@ def main():
             text_entry
         )
         button.pack()
+
+        pre_filled_entry = createPreFilledEntry(root_input)
+        pre_filled_entry.pack()
 
         root_input.mainloop()
 
