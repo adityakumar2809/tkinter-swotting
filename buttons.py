@@ -33,6 +33,20 @@ def createPaddedButton(root, text):
     return my_button
 
 
+def createCommandButton(root, text):
+    my_button = tkinter.Button(
+        master=root,
+        text=text,
+        command=lambda: showLabelOnClick(root)
+    )
+    return my_button
+
+
+def showLabelOnClick(root):
+    text_label = tkinter.Label(root, text='Hey there! I was clicked')
+    text_label.pack()
+
+
 def main():
 
     running_status = {
@@ -56,6 +70,12 @@ def main():
             'Click here as well'
         )
         padded_button.pack()
+
+        command_button = createCommandButton(
+            root_button,
+            'I execute a command'
+        )
+        command_button.pack()
 
         root_button.mainloop()
 
