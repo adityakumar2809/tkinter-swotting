@@ -26,6 +26,14 @@ def createBackgroundColorEntry(root):
     return entry
 
 
+def createButton(root, text):
+    my_button = tkinter.Button(
+        master=root,
+        text=text
+    )
+    return my_button
+
+
 def main():
 
     running_status = {
