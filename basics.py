@@ -1,8 +1,13 @@
 import tkinter
 
 
+def tkinterSetup():
+    root = tkinter.Tk()
+    return root
+
+
 def main():
-    pass
+    root = tkinterSetup()
 
 
 if __name__ == "__main__":
