@@ -56,6 +56,15 @@ def createFontColorButton(root, text):
     return my_button
 
 
+def createBackgroundColorButton(root, text):
+    my_button = tkinter.Button(
+        master=root,
+        text=text,
+        bg='red'
+    )
+    return my_button
+
+
 def main():
 
     running_status = {
@@ -91,6 +100,12 @@ def main():
             'I should have red text'
         )
         font_color_button.pack()
+
+        background_color_button = createBackgroundColorButton(
+            root_button,
+            'I should be red'
+        )
+        background_color_button.pack()
 
         root_button.mainloop()
 
