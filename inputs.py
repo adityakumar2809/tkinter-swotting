@@ -21,6 +21,11 @@ def createFontColorEntry(root):
     return entry
 
 
+def createBackgroundColorEntry(root):
+    entry = tkinter.Entry(root, bg='blue')
+    return entry
+
+
 def main():
 
     running_status = {
@@ -38,6 +43,9 @@ def main():
 
         font_color_entry = createFontColorEntry(root_input)
         font_color_entry.pack()
+
+        background_color_entry = createBackgroundColorEntry(root_input)
+        background_color_entry.pack()
 
         root_input.mainloop()
 
