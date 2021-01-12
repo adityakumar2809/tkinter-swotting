@@ -16,8 +16,8 @@ def createWideEntry(root, width=60):
     return entry
 
 
-def createFontColorEntry(root):
-    entry = tkinter.Entry(root, fg='#00FF00')
+def createFontColorEntry(root, color='#00FF00'):
+    entry = tkinter.Entry(root, fg=color)
     return entry
 
 
