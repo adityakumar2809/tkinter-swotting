@@ -33,6 +33,8 @@ def main():
         root_grid = tkinterSetup()
         text_label_1 = createLabel(root_grid, 'Hello World!')
         text_label_2 = createLabel(root_grid, 'I am Aditya')
+        text_label_1.grid(row=0, column=0)
+        text_label_2.grid(row=1, column=0)
         root_grid.mainloop()
 
 
