@@ -22,7 +22,7 @@ def createFontColorEntry(root):
 
 
 def createBackgroundColorEntry(root):
-    entry = tkinter.Entry(root, bg='blue')
+    entry = tkinter.Entry(root, bg='#0000FF')
     return entry
 
 
