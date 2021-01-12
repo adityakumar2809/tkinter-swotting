@@ -6,12 +6,12 @@ def tkinterSetup():
     return root
 
 
-def createLabel(root, text):
-    my_label = tkinter.Label(
+def createButton(root, text):
+    my_button = tkinter.Button(
         master=root,
         text=text
     )
-    return my_label
+    return my_button
 
 
 def main():
@@ -21,6 +21,11 @@ def main():
     }
 
     # BUTTON
+    if running_status['button']:
+        root_button = tkinterSetup()
+        button = createButton(root_button, 'Click me')
+        button.pack()
+        root_button.mainloop()
 
 
 if __name__ == "__main__":
