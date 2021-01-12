@@ -11,6 +11,11 @@ def createBlankEntry(root):
     return entry
 
 
+def createWideEntry(root):
+    entry = tkinter.Entry(root, width=60)
+    return entry
+
+
 def main():
 
     running_status = {
@@ -22,6 +27,9 @@ def main():
         root_input = tkinterSetup()
         blank_entry = createBlankEntry(root_input)
         blank_entry.pack()
+
+        wide_entry = createWideEntry(root_input)
+        wide_entry.pack()
 
         root_input.mainloop()
 
