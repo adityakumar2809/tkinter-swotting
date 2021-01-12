@@ -23,6 +23,16 @@ def createDiabledButton(root, text):
     return my_button
 
 
+def createPaddedButton(root, text):
+    my_button = tkinter.Button(
+        master=root,
+        text=text,
+        padx=20,
+        pady=10
+    )
+    return my_button
+
+
 def main():
 
     running_status = {
@@ -33,12 +43,20 @@ def main():
     if running_status['button']:
         root_button = tkinterSetup()
         button = createButton(root_button, 'Click me')
+        button.pack()
+
         disabled_button = createDiabledButton(
             root_button,
             'Click me if you can'
         )
-        button.pack()
         disabled_button.pack()
+
+        padded_button = createPaddedButton(
+            root_button,
+            'Click here as well'
+        )
+        padded_button.pack()
+
         root_button.mainloop()
 
 
