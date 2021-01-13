@@ -1,4 +1,5 @@
 import tkinter
+from PIL import Image, ImageTk
 
 
 def tkinterSetup(title='Untitled', icon_path='images/icon.ico'):
