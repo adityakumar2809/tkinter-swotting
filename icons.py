@@ -1,8 +1,9 @@
 import tkinter
 
 
-def tkinterSetup():
+def tkinterSetup(title='Untitled'):
     root = tkinter.Tk()
+    root.title(title)
     return root
 
 
