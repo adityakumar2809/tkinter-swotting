@@ -1,9 +1,10 @@
 import tkinter
 
 
-def tkinterSetup(title='Untitled'):
+def tkinterSetup(title='Untitled', icon_path='images/icon.png'):
     root = tkinter.Tk()
     root.title(title)
+    root.iconbitmap(icon_path)
     return root
 
 
@@ -23,7 +24,9 @@ def main():
 
     # ICONS
     if running_status['icon']:
-        pass
+        root_icon = tkinterSetup(title='Icon Window')
+
+        root_icon.mainloop()
 
 
 if __name__ == "__main__":
