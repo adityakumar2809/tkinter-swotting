@@ -1,7 +1,7 @@
 import tkinter
 
 
-def tkinterSetup(title='Untitled', icon_path='images/icon.png'):
+def tkinterSetup(title='Untitled', icon_path='images/icon.ico'):
     root = tkinter.Tk()
     root.title(title)
     root.iconbitmap(icon_path)
