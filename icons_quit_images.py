@@ -18,6 +18,13 @@ def createQuitCommandButton(root, text='Exit Program'):
     return my_button
 
 
+def createImage(path='images/icon.png'):
+    img = ImageTk.PhotoImage(
+        Image.open(path)
+    )
+    return img
+
+
 def main():
 
     running_status = {
@@ -27,8 +34,11 @@ def main():
     # ICONS
     if running_status['icon']:
         root_icon = tkinterSetup(title='Icon Window')
+        
         quit_button = createQuitCommandButton(root_icon)
         quit_button.pack()
+
+        img = createImage()
 
         root_icon.mainloop()
 
