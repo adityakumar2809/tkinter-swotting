@@ -8,6 +8,15 @@ def tkinterSetup(title='Untitled', icon_path='images/icon.ico'):
     return root
 
 
+def createQuitCommandButton(root, text='Exit Program'):
+    my_button = tkinter.Button(
+        master=root,
+        text=text,
+        command=root.quit
+    )
+    return my_button
+
+
 def main():
 
     running_status = {
@@ -17,6 +26,8 @@ def main():
     # ICONS
     if running_status['icon']:
         root_icon = tkinterSetup(title='Icon Window')
+        quit_button = createQuitCommandButton(root_icon)
+        quit_button.pack()
 
         root_icon.mainloop()
 
