@@ -25,6 +25,14 @@ def createImage(path='images/icon.png'):
     return img
 
 
+def createLabelWithImage(root, img):
+    my_label = tkinter.Label(
+        master=root,
+        image=img
+    )
+    return my_label
+
+
 def main():
 
     running_status = {
@@ -34,11 +42,13 @@ def main():
     # ICONS
     if running_status['icon']:
         root_icon = tkinterSetup(title='Icon Window')
-        
+
         quit_button = createQuitCommandButton(root_icon)
         quit_button.pack()
 
         img = createImage()
+        img_label = createLabelWithImage(root_icon, img)
+        img_label.pack()
 
         root_icon.mainloop()
 
