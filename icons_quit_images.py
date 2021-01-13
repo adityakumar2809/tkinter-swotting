@@ -8,14 +8,6 @@ def tkinterSetup(title='Untitled', icon_path='images/icon.ico'):
     return root
 
 
-def createLabel(root, text):
-    my_label = tkinter.Label(
-        master=root,
-        text=text
-    )
-    return my_label
-
-
 def main():
 
     running_status = {
