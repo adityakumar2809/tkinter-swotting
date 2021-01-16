@@ -6,12 +6,14 @@ def tkinterSetup():
     return root
 
 
-def createLabel(root, text):
-    my_label = tkinter.Label(
+def createRadioButton(root, text, value):
+    my_radio = tkinter.Radiobutton(
         master=root,
-        text=text
+        text=text,
+        variable=radio_variable,
+        value=value
     )
-    return my_label
+    return my_radio
 
 
 def main():
@@ -23,8 +25,9 @@ def main():
     # RADIO BUTTON
     if running_status['radio_button']:
         root = tkinterSetup()
-        text_label = createLabel(root, 'Hello World!')
-        text_label.pack()
+        radio_1 = createRadioButton(root, 'Option 1', 1)
+        radio_2 = createRadioButton(root, 'Option 2', 2)
+        radio_3 = createRadioButton(root, 'Option 3', 3)
         root.mainloop()
 
 
