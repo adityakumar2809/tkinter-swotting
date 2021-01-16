@@ -1,9 +1,14 @@
 import tkinter
+from tkinter import messagebox
 
 
 def tkinterSetup():
     root = tkinter.Tk()
     return root
+
+
+def popup():
+    messagebox.showinfo('My Pop-Up', 'Hello World')
 
 
 def createButton(root, text):
