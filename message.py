@@ -7,22 +7,38 @@ def tkinterSetup():
     return root
 
 
-def popup():
-    messagebox.showinfo('My Pop-Up', 'Hello World')
-    messagebox.showwarning('My Pop-Up', 'Hello World')
-    messagebox.showerror('My Pop-Up', 'Hello World')
-    messagebox.askquestion('My Pop-Up', 'Hello World')
-    messagebox.askokcancel('My Pop-Up', 'Hello World')
-    messagebox.askretrycancel('My Pop-Up', 'Hello World')
-    messagebox.askyesno('My Pop-Up', 'Hello World')
-    messagebox.askyesnocancel('My Pop-Up', 'Hello World')
+def popup(root):
+    response = messagebox.showinfo('My Pop-Up', 'Hello World')
+    label = createLabel(root, f'showinfo: { response }')
+    label.pack()
+    response = messagebox.showwarning('My Pop-Up', 'Hello World')
+    label = createLabel(root, f'showwarning: { response }')
+    label.pack()
+    response = messagebox.showerror('My Pop-Up', 'Hello World')
+    label = createLabel(root, f'showerror: { response }')
+    label.pack()
+    response = messagebox.askquestion('My Pop-Up', 'Hello World')
+    label = createLabel(root, f'askquestion: { response }')
+    label.pack()
+    response = messagebox.askokcancel('My Pop-Up', 'Hello World')
+    label = createLabel(root, f'askokcancel: { response }')
+    label.pack()
+    response = messagebox.askretrycancel('My Pop-Up', 'Hello World')
+    label = createLabel(root, f'askretrycancel: { response }')
+    label.pack()
+    response = messagebox.askyesno('My Pop-Up', 'Hello World')
+    label = createLabel(root, f'askyesno: { response }')
+    label.pack()
+    response = messagebox.askyesnocancel('My Pop-Up', 'Hello World')
+    label = createLabel(root, f'askyesnocancel: { response }')
+    label.pack()
 
 
 def createButton(root, text):
     my_button = tkinter.Button(
         master=root,
         text=text,
-        command=popup
+        command=lambda: popup(root)
     )
     return my_button
 
