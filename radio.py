@@ -1,7 +1,7 @@
 import tkinter
 
 
-global radio_variable
+global radio_variable, value_label
 
 
 def tkinterSetup():
@@ -14,7 +14,8 @@ def createRadioButton(root, text, value):
         master=root,
         text=text,
         variable=radio_variable,
-        value=value
+        value=value,
+        command=lambda: updateLabelValue(radio_variable.get())
     )
     return my_radio
 
@@ -27,9 +28,14 @@ def createLabel(root, text):
     return my_label
 
 
+def updateLabelValue(value):
+    global value_label
+    value_label.config(text=f'Value is {value}')
+
+
 def main():
 
-    global radio_variable
+    global radio_variable, value_label
 
     running_status = {
         'radio_button': True
