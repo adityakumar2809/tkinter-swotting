@@ -13,6 +13,7 @@ def popup():
     messagebox.showerror('My Pop-Up', 'Hello World')
     messagebox.askquestion('My Pop-Up', 'Hello World')
     messagebox.askokcancel('My Pop-Up', 'Hello World')
+    messagebox.askretrycancel('My Pop-Up', 'Hello World')
 
 
 def createButton(root, text):
