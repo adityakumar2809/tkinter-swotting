@@ -9,6 +9,7 @@ def tkinterSetup():
 
 def popup():
     messagebox.showinfo('My Pop-Up', 'Hello World')
+    messagebox.showwarning('My Pop-Up', 'Hello World')
 
 
 def createButton(root, text):
