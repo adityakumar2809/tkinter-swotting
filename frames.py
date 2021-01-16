@@ -6,10 +6,12 @@ def tkinterSetup():
     return root
 
 
-def createLabel(root, text):
-    my_label = tkinter.Label(
+def createLabelFrame(root, text):
+    my_label = tkinter.LabelFrame(
         master=root,
-        text=text
+        text=text,
+        padx=50,
+        pady=50
     )
     return my_label
 
@@ -23,8 +25,8 @@ def main():
     # FRAME
     if running_status['frame']:
         root = tkinterSetup()
-        text_label = createLabel(root, 'Hello World!')
-        text_label.pack()
+        text_label_frame = createLabelFrame(root, 'It is a frame')
+        text_label_frame.pack(padx=10, pady=10)
         root.mainloop()
 
 
