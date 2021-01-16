@@ -16,6 +16,14 @@ def createLabelFrame(root, text):
     return my_label
 
 
+def createButton(frame, text):
+    my_button = tkinter.Button(
+        master=frame,
+        text=text
+    )
+    return my_button
+
+
 def main():
 
     running_status = {
@@ -25,8 +33,10 @@ def main():
     # FRAME
     if running_status['frame']:
         root = tkinterSetup()
-        text_label_frame = createLabelFrame(root, 'It is a frame')
-        text_label_frame.pack(padx=10, pady=10)
+        label_frame = createLabelFrame(root, 'It is a frame')
+        label_frame.pack(padx=10, pady=10)
+        button = createButton(label_frame, text='Hello there')
+        button.pack()
         root.mainloop()
 
 
