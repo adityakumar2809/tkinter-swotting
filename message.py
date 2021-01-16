@@ -6,12 +6,13 @@ def tkinterSetup():
     return root
 
 
-def createLabel(root, text):
-    my_label = tkinter.Label(
+def createButton(root, text):
+    my_button = tkinter.Button(
         master=root,
-        text=text
+        text=text,
+        command=popup
     )
-    return my_label
+    return my_button
 
 
 def main():
@@ -23,8 +24,8 @@ def main():
     # MESSAGE BOX
     if running_status['msg']:
         root = tkinterSetup()
-        text_label = createLabel(root, 'Hello World!')
-        text_label.pack()
+        button = createButton(root, 'Pop-up')
+        button.pack()
         root.mainloop()
 
 
