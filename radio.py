@@ -19,6 +19,14 @@ def createRadioButton(root, text, value):
     return my_radio
 
 
+def createLabel(root, text):
+    my_label = tkinter.Label(
+        master=root,
+        text=text
+    )
+    return my_label
+
+
 def main():
 
     global radio_variable
@@ -30,14 +38,21 @@ def main():
     # RADIO BUTTON
     if running_status['radio_button']:
         root = tkinterSetup()
+
         radio_variable = tkinter.IntVar()
-        # radio_variable.get()
+
         radio_1 = createRadioButton(root, 'Option 1', 1)
         radio_2 = createRadioButton(root, 'Option 2', 2)
         radio_3 = createRadioButton(root, 'Option 3', 3)
         radio_1.pack()
         radio_2.pack()
         radio_3.pack()
+
+        value_label = createLabel(
+            root,
+            f'Value is {radio_variable.get()}'
+        )
+        value_label.pack()
         root.mainloop()
 
 
